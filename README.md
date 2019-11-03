@@ -1,5 +1,7 @@
 # Домашнее задание к занятию «2.3. Patterns»
 
+[![Build status](https://ci.appveyor.com/api/projects/status/hjqo9h20y6vfu5k4?svg=true)](https://ci.appveyor.com/project/falkona/aqa-231)
+
 **Реализованы проверки**:
 
 1. Отображается нотификация 'Успешно', если все поля заполнены валидными значениями
