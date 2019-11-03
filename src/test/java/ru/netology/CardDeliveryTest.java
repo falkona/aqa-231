@@ -1,6 +1,7 @@
 package ru.netology;
 
 import com.codeborne.selenide.Condition;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import static com.codeborne.selenide.Selenide.open;
@@ -11,6 +12,7 @@ public class CardDeliveryTest {
     private String baseUrl = "http://localhost:9999/";
 
     @Test
+    @DisplayName("Отображается нотификация 'Успешно', если все поля заполнены валидными значениями")
     void shouldBeSuccessIfDataIsValid() {
         open(baseUrl);
 
@@ -25,6 +27,7 @@ public class CardDeliveryTest {
     }
 
     @Test
+    @DisplayName("Отображается нотификация 'Перепланировать', если была изменена только дата")
     void needReplanIfDateWasChanged() {
         open(baseUrl);
 
@@ -45,6 +48,7 @@ public class CardDeliveryTest {
     }
 
     @Test
+    @DisplayName("Не отображается нотификация 'Перепланировать', если данные не были изменены")
     void doNotNeedReplanIfDateWasNotChanged() {
         open(baseUrl);
 
@@ -65,6 +69,7 @@ public class CardDeliveryTest {
     }
 
     @Test
+    @DisplayName("Не отображается нотификация 'Успешно', если номер телефона невалидный")
     void shouldBeErrorIfPhoneIsInvalid() {
         open(baseUrl);
 
